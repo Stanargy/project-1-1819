@@ -1,0 +1,76 @@
+  /* Palleton  : http://paletton.com/#uid=b2P3i2m0ksJtbhFA3mCuyujmY-7i1 */
+  
+  :root {
+    --primary: #ddd;
+    --dark: rgb(22, 22, 22);
+    --light: #fff;
+    --shadow: 10px 5px 50px rgb(0, 0, 0);
+    --shadowHover: 2vw 5vh 5vw rgb(0, 0, 0);
+    --lightshadow: 10px 5px 100px rgba(0, 0, 0, 0.678);
+    --shadowHoverLeft: -2vw 5vh 5vw rgb(0, 0, 0);
+    --shadowHoverMiddle: 0vw 5vh 10vw rgb(0, 0, 0);
+    --shadowHoverRight:2vw 5vh 5vw rgb(0, 0, 0);
+    --shadowMedium: 10px 5px 100px  rgba(0, 0, 0, 0.349);
+    
+    --textcolor: #005656;
+    --mediumbox: #0a0094;
+    --lightbox: rgb(176, 48, 250);
+    --darkbox: #efffff;
+
+    --hoverColor: rgb(0, 45, 129);
+    
+    
+    --background: rgba(255, 255, 255, 0.671);
+    --invisible: rgba(255, 255, 255, 0);
+
+    --boxColor1: rgb(231, 252, 231);
+    --boxColor2: Linear-gradient(90deg, rgba(247, 247, 247, 0.74) 28%, rgb(95, 138, 255) 71%);
+    --boxColor3: Linear-gradient(90deg, rgba(247, 247, 247, 0.74) 28%, rgb(10, 0, 143) 71%);
+    --boxLight: #5FD45F;
+    --boxMedium: #39C339;
+    --boxDark: #089208;
+    
+    /* Transition Speed */
+    --slowspeed: 2s;
+    --mediumspeed: 1s;
+    --fastspeed: 0.3s;
+
+    /* Responsize properties */
+    --fontSize:         calc(1em + 1.2vw /2);
+      --fontSizeTitle:    calc(1em + 10vw / 2);
+      --fontSizeSubTitle: calc(1em + 2vw / 2);
+      --fontSizeP:        calc(8px + 0.5vw /2);
+      --fontSizePnav:     calc(1em + 0.1vw / 2);
+      --MarginSize:       calc(1em + 10vw / 2);
+      --gridGap:          calc(1em + 2vw /2);
+      --imgWidth:         calc(1em + 40vw /2);
+      --imgHeight:        calc(1em + 60vh /2);
+      --cardIcon:         calc(10px + 1vw / 2);
+
+      --widthContainer600: calc(1em + 90vw /2;)
+    }
+
+/* /////////////////////////////////////////////////////////////////////////////////// */
+
+
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    overflow: hidden;
+}
+
+#arjsDebugUIContainer{
+    display: none;
+}
+
+#header{
+    background-color: #ffffff;
+    opacity: 0.5;
+    align-content: center;
+    align-items: center;
+    margin-right: 20vw;
+    margin-left: 20vw;
+
+}
