@@ -1,0 +1,24 @@
+{
+  "name": "obar",
+  "version": "1.0.0",
+  "description": "This is a single page web appication. oba-r",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stanargy/project-1-1819.git",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Stan Ooms",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stanargy/project-1-1819/issues"
+  },
+  "homepage": "https://github.com/Stanargy/project-1-1819#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
