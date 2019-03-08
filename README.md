@@ -8,10 +8,8 @@ This is a single page web appication. oba-r
 2. [Install](#2-Install)
 3. [Features](#3-Features)
 4. [API](#4-API)
-5. [Actor Diagram](#5-Actor-Diagram)
-6. [Interaction Diagram](#6-Interaction)
-7. [Design decisions](#7-Design-decisions)
-8. [To-do](#8-To-do)
+5. [Design decisions](#7-Design-decisions)
+6. [To-do](#8-To-do)
 
 ## 1. Live Demo
 https://oba-ar.netlify.com
@@ -24,6 +22,9 @@ Then launch the "project-1-1819" folder.
 This project features an Augmented Reality experience for visitors of the Public Library of Amsterdam. It uses the ar.js library and a-frame. Users can type in a query and select submit. The sourcecode wil then call the library's API and renders the title, author and short description in AR back to the user via a camera instance. 
 
 The homepage renders the earth in AR-view by default
+
+![With Camera Entity](StanOoms1.JPG)
+![Without Camera Entity](StanOoms2.JPG)
 
 
 ## 4. API
@@ -47,12 +48,20 @@ async function callAPI(){
 };
 ```
 
-## 7. Design Decisions
+## 5. Design Decisions
 I chose for a augmented reality approach to this project because making AR web based is a relatively new technology. 
 This encouraged me to use different tools and find my way through new problems which in turn, granted me experience on a-frame and ar.js. 
 
-## 8. To-do
+## 6. To-do
+- [X] Render data form OBA API to the browser
 - [X] Add a Camera entity
-- [ ]
+- [X] Add AR-objects to the view that show off potential of web-based-AR
+- [X] Setup Marker entity for ar.js
+- [X] Setup live view on Netlify
+- [X] Add user search input functionality
+- [ ] Setup routes for node.js
+- [ ] Modulize docs
+- [ ] Take out global variables
+- [ ] Fix filter problem for image data from API
 
 
