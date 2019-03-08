@@ -25,6 +25,9 @@ The homepage renders the earth in AR-view by default
 
 ![With Camera Entity](StanOoms1.JPG)
 ![Without Camera Entity](StanOoms2.JPG)
+![View After submitting a Query](StanOoms3.JPG)
+![View After Selecting a object from the Query](StanOoms4.JPG)
+
 
 
 ## 4. API
@@ -63,5 +66,6 @@ This encouraged me to use different tools and find my way through new problems w
 - [ ] Modulize docs
 - [ ] Take out global variables
 - [ ] Fix filter problem for image data from API
+- [ ] Add more Shadowing Effects
 
 
