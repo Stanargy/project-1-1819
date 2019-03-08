@@ -5,11 +5,15 @@
 
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Entered the AR Site</title>
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/media.css">
+    <!-- <link rel="stylesheet" href="/public/css/keyframes.css> -->
 
 </head>
     
@@ -18,19 +22,80 @@
 
 
     <body style='margin : 0px; overflow: hidden;'>
+        <nav>
 
-        <div class="header">
-            <h1>OBA - AR</h1>
-            <h2>Make sure you are using desktopsite!!</h2>
+            <div class="header">
+                <h1>OBA - AR</h1>
+                
+                <p>Make sure you are using desktopsite!!</p>
+                <form action="input">
+                    <input type="text" placeholder="What are you looking for?" id="inputField">
+                    <input type="button" value="submit" id="submitButton" >
+                </form>
+                
+            <button id="nextButton1">
+                <h5>click 1</h5>
+            </button>
+            <button id="nextButton2">
+                <h5>click 2</h5>
+            </button>
+            <button id="nextButton3">
+                <h5>click 3</h5>
+            </button>
         </div>
-        <a-scene embedded arjs>
+    </nav>
+        <div class="ar-box">
+            
+                <a-scene fog="type: linear; color: #AAA">
 
-            <!--     add own OBA marker -->
-            <a-marker class="ar-box" preset="hiro">
+                        <a-assets>
+                                <img id="library" src="/public/img/coloseum.jpg">
+                                <!-- <a-asset-item id="crate-obj" src="public/obj/monitor.obj"></a-asset-item> -->
+                                <!-- <a-asset-item id="dstar" src="/public/obj/dstar/death-star-II-v2.obj"></a-asset-item>
+                                <a-asset-item id="dstar-mtl" src="/public/obj/dstar/death-star-II-v2.mtl"></a-asset-item>
+                            -->
+                                <a-asset-item id="planet" src="/public/obj/planet/geonosis.obj"></a-asset-item>
+                                <a-asset-item id="planet-mtl" src="/public/obj/planet/geonosis.mtl"></a-asset-item>
+                           
+                            </a-assets>
+                            
+                        
+                              <a-circle position="0 0 2" radius="3" height="4" color="white" opacity="0"></a-circle>
+                                <a-sphere position="0 0 -10" radius="5" rotate="0 -90 0" src="/public/img/earth.jpg" shadow="receive: false" >
+                                    <a-animation attribute="rotation" repeat="indefinite" to="0 360 0" dur="60000" easing="ease-in-out-circ" direction="alternate-reverse"></a-animation>
+                                    <a-event name="mouseenter"></a-event>
+                                </a-sphere>
+                                
+                                <a-obj-model src="#planet" mtl="#planet-mtl" scale="0.01 0.01 0.01" position="-10 -2 5" opacity="1"></a-obj-model>
+            
 
-            </a-marker>
-            <a-entity camera="zoom: 0"></a-entity>
-        </a-scene>
+                                <!-- Rings around the earth -->
+          
+                        <a-sphere position="0 0 -10" radius="8" rotate="0 -90 0" color="#6495ed" opacity="0.3" >
+                                <a-animation attribute="rotation" repeat="indefinite" to="360 90 0" dur="6000" easing="ease-in-out-circ" direction="alternate-reverse"></a-animation>
+                                  
+                        </a-sphere>
+                        <a-sphere position="0 0 -10" radius="9" rotate="0 -90 0" color="#191970" opacity="0.3" >
+                                <a-animation attribute="rotation" repeat="indefinite" to="360 90 0" dur="6000" easing="ease-in-out-circ" direction="alternate-reverse"></a-animation>
+                              
+                        </a-sphere>
+                        <a-sphere position="0 0 -10" radius="10" rotate="0 -90 0" color="white" opacity="0.3" >
+                                <a-animation attribute="rotation" repeat="indefinite" to="360 90 0" dur="6000" easing="ease-in-out-circ" direction="alternate-reverse"></a-animation>
+                              
+                        </a-sphere>
+                        <a-sphere position="0 0 -10" radius="11" rotate="0 -90 0" color="yellow" opacity="0.3" >
+                                <a-animation attribute="rotation" repeat="indefinite" to="360 90 0" dur="6000" easing="ease-in-out-circ" direction="alternate-reverse"></a-animation>
+                              
+                        </a-sphere>
+
+                
+                        <a-entity light="type:directional; castShadow:true;" position="1 0.2 0.3"></a-entity>
+                        <a-camera position="0 0 15">
+                          
+                        </a-camera>
+                      </a-scene>
+                    </div>
+                
 
         <style type="text/css">
             body {

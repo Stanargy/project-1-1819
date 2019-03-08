@@ -1,0 +1,28 @@
+@media screen and (max-width: 400px){
+    nav{
+        align-content: center;
+    }
+
+    .header{
+
+        display: grid;
+       
+    }
+    .header > p{
+        grid-row: 2/3;
+        grid-column: 2/3;
+
+    }
+    .header > form{
+        grid-row: 3/4;
+        grid-column: 2/3;
+        
+
+    }
+
+    .header > button{
+        width: 30vw;
+
+    }
+
+}

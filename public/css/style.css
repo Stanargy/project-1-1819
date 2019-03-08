@@ -53,24 +53,117 @@
 /* /////////////////////////////////////////////////////////////////////////////////// */
 
 
+
 body{
     height: 100vh;
     width: 100vw;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+
     
-    overflow: hidden;
+    
 }
 
 #arjsDebugUIContainer{
     display: none;
 }
 
-#header{
+.header{
     background-color: #ffffff;
-    opacity: 0.5;
+    opacity: 0;
     align-content: center;
     align-items: center;
-    margin-right: 20vw;
-    margin-left: 20vw;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 10vh 10vh 5vh;
+    margin-top: 1vw;
+    border-radius: 10px;
+    animation-name: fadeIn;
+    animation-fill-mode: backwards;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-duration: 2s;
 
+    position: relative;
+
+    z-index: 100;
+    transition: 0.4s;
+}
+
+.header:hover{
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.moveToSide{
+margin-top: 0;
+color: blue;
+opacity: 0.3;
+margin-left: -50%;
+font-size: 15px;
+transition:1s;
+}
+
+.header > h1{
+  font-size: 5vw;
+  font-weight: 1000;
+  margin-bottom: 0;
+  grid-column: 1/4;
+  grid-row: 0/1;
+}
+.header > h2{
+  grid-column: 1/4;
+  grid-row: 2/3;
+
+}
+#nextButton1{
+ grid-column: 1/2;
+ grid-row: 3/4
+}
+#nextButton2{
+ grid-column: 2/3;
+ grid-row: 3/4
+}
+#nextButton3{
+ grid-column: 3/4;
+ grid-row: 3/4
+}
+#nextButton1, #nextButton2, #nextButton3{
+  display: none;
+}
+  
+.ar-box{
+width: 100vw;
+height: 100vh;
+}
+
+p{
+  font-size: 1em;
+  color: red;
+}
+
+
+@keyframes fadeIn{
+  0%{
+
+      opacity: 0;
+      margin-left: -110vw;
+      
+  }
+  100%{
+
+      opacity: 1;
+      margin-left: 20vw;
+  }
+}
+
+@keyframes moveToSide{
+  0%{
+    margin-left: 20vw;
+  }
+  100%{
+    margin-left: 40vw;
+  }
 }
